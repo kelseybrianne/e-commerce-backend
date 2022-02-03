@@ -7,15 +7,8 @@ class Tag extends Model {}
 Tag.init(
   {
     // define columns
-    product_id: {
-      type: DataTypes.INTEGER,
-      // References the Product model's id
-
-    },
-    tag_id: {
-      type: DataTypes.INTEGER,
-      // References the Tag model's id
-
+    tag_name: {
+      type: DataTypes.STRING,
     }
   },
   {
