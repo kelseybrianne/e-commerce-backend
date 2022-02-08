@@ -6,26 +6,31 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // get all products
 router.get('/', async (req, res) => {
   // find all products
-  const productData = await Product.findAll();
+  const productData = await Product.findAll(
+    {
+      // include its associated Category and Tag data 
+      include: [
+        {model: Category},
+        {model: Tag, through: ProductTag}
+      ]
+    }
+  );
   return res.json(productData);
-  // be sure to include its associated Category and Tag data ? HOW DO YOU INCLUDE TAG DATA THAT'S NOT IN PRODUCT MODEL
 });
 
 // get one product
 router.get('/:id', async (req, res) => {
   // find a single product by its `id`
-  const productData = await Product.findOne(
-    {
-      where: {
-        id: req.params.id
-      }
-    }
-  );
+  const productData = await Product.findByPk(req.params.id, {
+    // include its associated Category and Tag data
+    include: [
+      {model: Category},
+      {model: Tag, through: ProductTag}
+    ]
+  });
   return res.json(productData);
-  // be sure to include its associated Category and Tag data
 });
 
-// ? WHEN YOU CREATE ONE THE CATEGORY_ID IS NULL
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
