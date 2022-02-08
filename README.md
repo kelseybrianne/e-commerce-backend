@@ -2,7 +2,7 @@
 
 ## Description
 
-This is the backend application for an e-commerce site. An Express.js API has been configured so that Sequelize can be used to interact with a MySQL database. The site connected to this backend application would have the ability to use different categories to organize its products and assign any relevant tags to each product.
+This is the backend application for an e-commerce site. An Express.js API has been configured so that Sequelize can be used to interact with a MySQL database. The site connected to this backend application would have the ability to use different categories to organize its products and assign any relevant tags to each product. Click [here](https://watch.screencastify.com/v/xagSWq11TS4rKayFsSwr) to watch a quick walkthrough video that demonstrates the application's functionality.
 
 ## User Story
 
