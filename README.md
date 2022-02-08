@@ -1,5 +1,9 @@
 # E-Commerce Backend 🛍️
 
+## Description
+
+This is the backend application for an e-commerce site. An Express.js API has been configured so that Sequelize can be used to interact with a MySQL database. The site connected to this backend application would have the ability to use different categories to organize its products and assign any relevant tags to each product.
+
 ## User Story
 
 ```
@@ -23,3 +27,12 @@ THEN the data for each of these routes is displayed in a formatted JSON
 WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
 THEN I am able to successfully create, update, and delete data in my database
 ```
+
+## Technologies Used
+
+- JavaScript
+- Express
+- MySQL
+- Sequelize
+- Nodemon
+- dotenv
